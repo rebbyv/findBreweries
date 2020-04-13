@@ -1,7 +1,7 @@
 const key = require('../config.js');
 const request = require('request');
 
-module.exports = function(query) {
+module.exports = (query) => {
   const options = {
     url: 'https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search',
     headers: {
@@ -22,15 +22,4 @@ module.exports = function(query) {
       }
     })
   })
-
-}
-
-// var cb = (err, res, body) => {
-//   if (err) {
-//     console.log(err)
-//   } else {
-//     console.log(body)
-//   }
-// }
-
-// request(options, cb)
+};
