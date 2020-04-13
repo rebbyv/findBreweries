@@ -1,0 +1,25 @@
+{
+  "name": "findbreweries",
+  "version": "1.0.0",
+  "description": "find a brewery near you",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebbyv/findBreweries.git"
+  },
+  "author": "Rebekah Vincent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rebbyv/findBreweries/issues"
+  },
+  "homepage": "https://github.com/rebbyv/findBreweries#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3",
+    "path": "^0.12.7",
+    "request": "^2.88.2"
+  }
+}
