@@ -5,8 +5,8 @@ const app = express();
 
 app.use(express.static('client/dist'));
 
-app.get('/breweries', (req, res) => {
-  apiCall('78620')
+app.get('/breweries/:zip', (req, res) => {
+  apiCall(req.params.zip)
   .then((data) => res.status(200).send(data))
   .catch((error) => res.status(404).send(error))
 
