@@ -7,10 +7,18 @@ class App extends React.Component {
     this.state = {}
   }
 
+  getBreweries() {
+
+  }
+
   render() {
     return (
       <div>
-        <h1> Hi, this is react</h1>
+        <h1>Micro-Brewery Finder</h1>
+        <form> 
+          <label>Enter your zip code to find nearby breweries</label>
+          <input type='text'></input>
+        </form>
       </div>
     )
   }
