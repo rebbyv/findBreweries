@@ -1,7 +1,7 @@
 const key = require('../config.js');
 const request = require('request');
 
-module.exports = (query) => {
+module.exports = function(query) {
   const options = {
     url: 'https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search',
     headers: {
@@ -11,7 +11,7 @@ module.exports = (query) => {
     qs: {
       query: query
     }
-  }
+  };
 
   return new Promise((resolve, reject) => {
     request(options, (error, res, body) => {

@@ -1,14 +1,14 @@
 const express = require('express');
 const port = process.env.PORT || 3000;
-const apiRequest = require('./apiRequest.js');
+var apiCall = require('./apiRequest.js');
 const app = express();
 
-
-console.log(apiRequest)
 app.use(express.static('client/public'));
 
-app.get('/breweries/:location', (req, res) => {
-  
+app.get('/breweries', (req, res) => {
+  apiCall('78620')
+  .then((data) => res.status(200).send(data))
+  .catch((error) => res.status(404).send(error))
 
 })
 
