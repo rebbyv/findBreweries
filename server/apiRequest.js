@@ -1,4 +1,4 @@
-const key = require('../config.js');
+//const key = require('../config.js');
 const request = require('request');
 
 module.exports = (query) => {
@@ -6,7 +6,7 @@ module.exports = (query) => {
     url: 'https://brianiswu-open-brewery-db-v1.p.rapidapi.com/breweries/search',
     headers: {
       "x-rapidapi-host": "brianiswu-open-brewery-db-v1.p.rapidapi.com",
-      "x-rapidapi-key": key
+      "x-rapidapi-key": process.env.rapidApiKey
     },
     qs: {
       query: query
