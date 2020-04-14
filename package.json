@@ -32,5 +32,11 @@
     "request": "^2.88.2",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11"
+  },
+  "keywords": [
+    "heroku"
+  ],
+  "engines": {
+    "node": "10.16.3"
   }
 }

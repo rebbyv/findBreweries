@@ -1,5 +1,8 @@
 const express = require('express');
-const port = process.env.PORT || 3000;
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 var apiCall = require('./apiRequest.js');
 const app = express();
 
