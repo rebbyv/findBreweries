@@ -6,8 +6,21 @@ html {
   background-size: cover;
 }
 
-#app {
-  background-color: #0e01019e;
+/* #app {
+  background-color: #0e0404c9;
+  color: #f7bc4c;
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  width: 500px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -250px;
+  text-align: center;
+} */
+
+#main {
+  background-color: #0e0404c9;
   color: #f7bc4c;
   font-family: 'Montserrat', sans-serif;
   position: absolute;
@@ -29,4 +42,42 @@ input {
   font-size: 20px;
   text-align: center;
   width: 150px;
+  border: none;
+  outline: none;
+}
+
+
+/* Locations pages*/
+#locations-header {
+  background-color: #0e0404c9;
+  color: #f7bc4c;
+  font-family: 'Montserrat', sans-serif;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+#location-info {
+  background-color: #0e0404c9;
+  color: #e8d4ae;
+  margin: 20px auto;
+  width: 60%;
+  padding: 20px 50px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-top: 1px #e8d4ae solid;
+}
+
+a {
+  color: #e8d4ae;
+  text-decoration: none;
+}
+a:hover {
+  font-size: larger;
 }
