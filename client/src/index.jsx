@@ -47,7 +47,13 @@ class App extends React.Component {
 
     return (
       <div>
-        {this.state.locations ? <Locations locations={this.state.locations}/>: searchDiv}
+        {this.state.locations ? 
+          <Locations 
+            locations={this.state.locations} 
+            value={this.state.zip} 
+            handleChange={this.handleZipChange.bind(this)} 
+            searchBreweries={this.getBreweries.bind(this)}/>
+          : searchDiv}
       </div>
     )
   }

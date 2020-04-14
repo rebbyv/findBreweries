@@ -49,12 +49,36 @@ input {
 
 /* Locations pages*/
 #locations-header {
+  display: flex;
+  margin: auto;
+  width: 80%;
+}
+
+#locations-header-title {
   background-color: #0e0404c9;
   color: #f7bc4c;
   font-family: 'Montserrat', sans-serif;
-  width: 50%;
+  width: 80%;
   margin: auto;
   text-align: center;
+}
+
+#new-search-form {
+  width: 20%;
+  background-color: #0e0404c9;
+  color: #f7bc4c;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+#new-search {
+  margin: 5px;
+  width: 100px;
 }
 
 #location-info {
