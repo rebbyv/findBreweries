@@ -19,8 +19,8 @@ class App extends React.Component {
 
   getBreweries(e) {
     e.preventDefault();
-
-    axios.get(`http://localhost:3000/breweries/${this.state.zip}`)
+    const baseUrl = 'http://localhost:3000';
+    axios.get(`${baseUrl}/breweries/${this.state.zip}`)
     .then((response) => {
       this.setState({
         zip: '',
