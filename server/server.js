@@ -16,7 +16,7 @@ app.get('/breweries/:zip', (req, res) => {
 
 })
 
-app.listen(port, (error) => {
+app.listen(port || 5000, (error) => {
   error ? console.log("Error in establishing server"): console.log(`Server listening on ${port}`)
 })
 
