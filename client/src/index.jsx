@@ -1,8 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-const axios = require('axios');
 import Locations from './locations.jsx';
-import Location from './location.jsx';
 
 class App extends React.Component {
   constructor(props) {
