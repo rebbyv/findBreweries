@@ -1,5 +1,49 @@
+const { useState } = React;
 import Locations from './locations.jsx';
 
+//// using hooks ////
+var App = (props) => {
+  const [zip, setZip] = useState('');
+  const [locations, setLocations] = useState(null);
+
+  const getBreweries = (e) => {
+    e.preventDefault();
+    axios.get(`http://localhost:8000/breweries/${zip}`)
+      .then((response) => {
+        setZip('');
+        setLocations(response.data)
+      })
+      .catch((error) => console.log(error))
+  }
+
+  const changeZip = (newZip) => setZip(newZip);
+
+  var searchDiv = (
+    <div id='main'>
+      <h1>Micro-Brewery Finder</h1>
+      <form onSubmit={(e) => { getBreweries(e) }}> 
+        <label>Enter your zip code to find nearby breweries</label>
+        <input type='text' value={zip} onChange={(e) => setZip(e.target.value)}></input>
+      </form>
+    </div>
+  )
+
+  return (
+    <div>
+      {locations ? 
+        <Locations 
+          locations={locations} 
+          value={zip} 
+          handleChange={changeZip} 
+          searchBreweries={getBreweries}/>
+        : searchDiv}
+    </div>
+  )
+}
+
+
+// without hooks
+/*
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -54,5 +98,6 @@ class App extends React.Component {
     )
   }
 }
+*/
 
 ReactDOM.render(<App />, document.getElementById('app'))
